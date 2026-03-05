@@ -9,8 +9,8 @@ const FIRST_KISS_DATE = new Date("2023-10-08T00:00:00");
 const RELATIONSHIP_DATE = new Date("2023-12-08T00:00:00");
 
 // ✏️  EDITE AQUI: Seus nomes
-const NAME_1 = "Lucas";
-const NAME_2 = "Giulia";
+const NAME_1 = "Giu";
+const NAME_2 = "Quinhas";
 
 // ✏️  EDITE AQUI: Frase especial
 const SPECIAL_PHRASE =
@@ -176,7 +176,7 @@ export default function ContadorPage() {
     >
       {/* Banner */}
       <Image
-        src="/photos/banner-lg.png"
+        src="/photos/banner-lg-13.webp"
         alt="Lucas & Giulia - I see daylight"
         width={1920}
         height={600}
