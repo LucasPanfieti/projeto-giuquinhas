@@ -47,7 +47,7 @@ export default function Navigation() {
         <Link href="/contador" style={{ textDecoration: "none" }}>
           <div style={{ display: "flex", alignItems: "center" }}>
             <Image
-              src="/photos/logo.png"
+              src="/photos/LG-logo.webp"
               alt="Nossa História"
               width={60}
               height={60}
