@@ -29,6 +29,11 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
+# Next.js 15
+.next/cache/
+/public/sw.js
+/public/workbox-*.js
+
 # Sistema operacional
 .DS_Store
 Thumbs.db
