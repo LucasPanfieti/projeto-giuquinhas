@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 // ✏️  EDITE AQUI: Data do primeiro beijo e data oficial do namoro
 const FIRST_KISS_DATE = new Date("2023-10-08T00:00:00");
@@ -165,15 +166,29 @@ export default function ContadorPage() {
     <div
       style={{
         minHeight: "100vh",
-        paddingTop: "64px",
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "center",
-        padding: "64px 2rem 4rem",
+        padding: "0 2rem 4rem",
         position: "relative",
       }}
     >
+      {/* Banner */}
+      <Image
+        src="/photos/banner-lg.png"
+        alt="Lucas & Giulia - I see daylight"
+        width={1920}
+        height={600}
+        style={{
+          width: "100%",
+          height: "auto",
+          display: "block",
+          // marginBottom: "2rem",
+          marginTop: "70px",
+        }}
+        priority
+      />
       {/* Header */}
       <div
         className="animate-fade-in-up"
@@ -189,7 +204,7 @@ export default function ContadorPage() {
             marginBottom: "1rem",
           }}
         >
-          Desde 08 de dezembro de 2023
+          Desde 08 de outubro de 2023 juntos
         </p>
         <h1
           style={{
@@ -222,7 +237,7 @@ export default function ContadorPage() {
           />
           <span
             className="heartbeat"
-            style={{ color: "#a05060", fontSize: "1rem" }}
+            style={{ color: "#c9a84c", fontSize: "1rem" }}
           >
             ♥
           </span>
@@ -236,7 +251,7 @@ export default function ContadorPage() {
         </div>
       </div>
 
-      {/* Main Counter */}
+      {/* Main Counter Namoro*/}
       <div
         className="animate-fade-in-up delay-200 gold-glow"
         style={{
@@ -244,7 +259,7 @@ export default function ContadorPage() {
           border: "1px solid rgba(201,168,76,0.2)",
           borderRadius: "8px",
           padding: "clamp(2rem, 5vw, 3.5rem)",
-          marginBottom: "1.5rem",
+          marginBottom: "4rem",
           position: "relative",
           overflow: "hidden",
         }}
@@ -302,15 +317,31 @@ export default function ContadorPage() {
         <p
           style={{
             textAlign: "center",
-            fontFamily: "Jost, sans-serif",
-            fontSize: "0.6rem",
             letterSpacing: "0.35em",
             textTransform: "uppercase",
-            color: "#6a6050",
+            marginBottom: "2rem",
+            fontFamily: "Cormorant Garamond, serif",
+            fontSize: "clamp(1.1rem, 2.5vw, 1.4rem)",
+            fontWeight: 300,
+            color: "#c9a84c",
+          }}
+        >
+          Namoro
+        </p>
+
+        <p
+          style={{
+            textAlign: "center",
+            fontFamily: "Jost, sans-serif",
+            fontSize: "0.58rem",
+            letterSpacing: "0.3em",
+            textTransform: "uppercase",
+            color: "#4a4040",
+            marginTop: "-1.25rem",
             marginBottom: "2rem",
           }}
         >
-          Namorando há
+          desde 08 de dezembro de 2023
         </p>
 
         <div
@@ -337,6 +368,11 @@ export default function ContadorPage() {
 
         <div
           style={{
+            display: "flex",
+            flexWrap: "wrap",
+            alignItems: "center",
+            justifyContent: "center",
+            gap: "0.25rem",
             textAlign: "center",
             marginTop: "2rem",
             paddingTop: "1.5rem",
@@ -352,13 +388,204 @@ export default function ContadorPage() {
               fontStyle: "italic",
             }}
           >
-            {time.totalDays.toLocaleString("pt-BR")} dias juntos
+            {time.totalDays.toLocaleString("pt-BR")} dias
+          </span>
+          <span style={{ color: "#4a4040", margin: "0 0.75rem" }}>·</span>
+          <span
+            style={{
+              fontFamily: "Cormorant Garamond, serif",
+              fontSize: "clamp(1.1rem, 2.5vw, 1.4rem)",
+              fontWeight: 300,
+              color: "#c9a84c",
+              fontStyle: "italic",
+            }}
+          >
+            {Math.floor(time.totalDays / 7).toLocaleString("pt-BR")} semanas
+          </span>
+          <span style={{ color: "#4a4040", margin: "0 0.75rem" }}>·</span>
+          <span
+            style={{
+              fontFamily: "Cormorant Garamond, serif",
+              fontSize: "clamp(1.1rem, 2.5vw, 1.4rem)",
+              fontWeight: 300,
+              color: "#c9a84c",
+              fontStyle: "italic",
+            }}
+          >
+            {(time.years * 12 + time.months).toLocaleString("pt-BR")} meses
+          </span>
+        </div>
+      </div>
+
+      {/* Main Counter Juntos */}
+      <div
+        className="animate-fade-in-up delay-200 gold-glow"
+        style={{
+          background: "rgba(22,22,22,0.9)",
+          border: "1px solid rgba(201,168,76,0.2)",
+          borderRadius: "8px",
+          padding: "clamp(2rem, 5vw, 3.5rem)",
+          marginBottom: "3rem",
+          position: "relative",
+          overflow: "hidden",
+        }}
+      >
+        {/* Corner decorations */}
+        <div
+          style={{
+            position: "absolute",
+            top: "12px",
+            left: "12px",
+            width: "20px",
+            height: "20px",
+            borderTop: "1px solid #c9a84c",
+            borderLeft: "1px solid #c9a84c",
+            opacity: 0.4,
+          }}
+        />
+        <div
+          style={{
+            position: "absolute",
+            top: "12px",
+            right: "12px",
+            width: "20px",
+            height: "20px",
+            borderTop: "1px solid #c9a84c",
+            borderRight: "1px solid #c9a84c",
+            opacity: 0.4,
+          }}
+        />
+        <div
+          style={{
+            position: "absolute",
+            bottom: "12px",
+            left: "12px",
+            width: "20px",
+            height: "20px",
+            borderBottom: "1px solid #c9a84c",
+            borderLeft: "1px solid #c9a84c",
+            opacity: 0.4,
+          }}
+        />
+        <div
+          style={{
+            position: "absolute",
+            bottom: "12px",
+            right: "12px",
+            width: "20px",
+            height: "20px",
+            borderBottom: "1px solid #c9a84c",
+            borderRight: "1px solid #c9a84c",
+            opacity: 0.4,
+          }}
+        />
+
+        <p
+          style={{
+            textAlign: "center",
+            letterSpacing: "0.35em",
+            textTransform: "uppercase",
+            marginBottom: "2rem",
+            fontFamily: "Cormorant Garamond, serif",
+            fontSize: "clamp(1.1rem, 2.5vw, 1.4rem)",
+            fontWeight: 300,
+            color: "#c9a84c",
+          }}
+        >
+          Juntos
+        </p>
+
+        <p
+          style={{
+            textAlign: "center",
+            fontFamily: "Jost, sans-serif",
+            fontSize: "0.58rem",
+            letterSpacing: "0.3em",
+            textTransform: "uppercase",
+            color: "#4a4040",
+            marginTop: "-1.25rem",
+            marginBottom: "2rem",
+          }}
+        >
+          desde 08 de outubro de 2023
+        </p>
+
+        <div
+          style={{
+            display: "flex",
+            alignItems: "flex-start",
+            gap: "clamp(6px, 2vw, 16px)",
+            flexWrap: "wrap",
+            justifyContent: "center",
+          }}
+        >
+          <CounterUnit value={kissTime.years} label="anos" />
+          <Separator />
+          <CounterUnit value={kissTime.months} label="meses" />
+          <Separator />
+          <CounterUnit value={kissTime.days} label="dias" />
+          <Separator />
+          <CounterUnit value={kissTime.hours} label="horas" />
+          <Separator />
+          <CounterUnit value={kissTime.minutes} label="minutos" />
+          <Separator />
+          <CounterUnit value={kissTime.seconds} label="segundos" />
+        </div>
+
+        <div
+          style={{
+            display: "flex",
+            flexWrap: "wrap",
+            alignItems: "center",
+            justifyContent: "center",
+            gap: "0.25rem",
+            textAlign: "center",
+            marginTop: "2rem",
+            paddingTop: "1.5rem",
+            borderTop: "1px solid rgba(201,168,76,0.1)",
+          }}
+        >
+          <span
+            style={{
+              fontFamily: "Cormorant Garamond, serif",
+              fontSize: "clamp(1.1rem, 2.5vw, 1.4rem)",
+              fontWeight: 300,
+              color: "#c9a84c",
+              fontStyle: "italic",
+            }}
+          >
+            {kissTime.totalDays.toLocaleString("pt-BR")} dias
+          </span>
+          <span style={{ color: "#4a4040", margin: "0 0.75rem" }}>·</span>
+          <span
+            style={{
+              fontFamily: "Cormorant Garamond, serif",
+              fontSize: "clamp(1.1rem, 2.5vw, 1.4rem)",
+              fontWeight: 300,
+              color: "#c9a84c",
+              fontStyle: "italic",
+            }}
+          >
+            {Math.floor(kissTime.totalDays / 7).toLocaleString("pt-BR")} semanas
+          </span>
+          <span style={{ color: "#4a4040", margin: "0 0.75rem" }}>·</span>
+          <span
+            style={{
+              fontFamily: "Cormorant Garamond, serif",
+              fontSize: "clamp(1.1rem, 2.5vw, 1.4rem)",
+              fontWeight: 300,
+              color: "#c9a84c",
+              fontStyle: "italic",
+            }}
+          >
+            {(kissTime.years * 12 + kissTime.months).toLocaleString("pt-BR")}{" "}
+            meses
           </span>
         </div>
       </div>
 
       {/* First kiss counter */}
-      <div
+      {/* <div
         className="animate-fade-in-up delay-300"
         style={{
           background: "rgba(16,16,16,0.8)",
@@ -393,7 +620,7 @@ export default function ContadorPage() {
           08 de outubro de 2023 — há{" "}
           {kissTime.totalDays.toLocaleString("pt-BR")} dias
         </p>
-      </div>
+      </div> */}
 
       {/* Special phrase */}
       <div
