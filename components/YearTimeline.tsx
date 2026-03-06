@@ -197,7 +197,7 @@ export default function YearTimeline({ data }: Props) {
                         src={moment.photo}
                         alt={moment.title}
                         fill
-                        style={{ objectFit: "cover" }}
+                        style={{ objectFit: "contain" }}
                       />
                     </div>
                   ) : (

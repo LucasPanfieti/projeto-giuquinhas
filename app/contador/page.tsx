@@ -206,19 +206,7 @@ export default function ContadorPage() {
         >
           Desde 08 de outubro de 2023 juntos
         </p>
-        <h1
-          style={{
-            fontFamily: "Cormorant Garamond, serif",
-            fontSize: "clamp(2.5rem, 7vw, 5rem)",
-            fontWeight: 300,
-            lineHeight: 1.1,
-            marginBottom: "0.5rem",
-          }}
-        >
-          <span className="text-gold-gradient">{NAME_1}</span>
-          <span style={{ color: "#3a3030", margin: "0 0.5rem" }}>×</span>
-          <span className="text-gold-gradient">{NAME_2}</span>
-        </h1>
+
         <div
           style={{
             display: "flex",
@@ -665,7 +653,19 @@ export default function ContadorPage() {
             letterSpacing: "0.02em",
           }}
         >
-          "{SPECIAL_PHRASE}"
+          <h1
+            style={{
+              fontFamily: "Cormorant Garamond, serif",
+              fontSize: "clamp(2.5rem, 7vw, 5rem)",
+              fontWeight: 300,
+              lineHeight: 1.1,
+              marginBottom: "0.5rem",
+            }}
+          >
+            <span className="text-gold-gradient">{NAME_1}</span>
+            <span style={{ color: "#3a3030", margin: "0 0.5rem" }}>×</span>
+            <span className="text-gold-gradient">{NAME_2}</span>
+          </h1>
         </p>
       </div>
 
