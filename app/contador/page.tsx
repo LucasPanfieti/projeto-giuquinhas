@@ -644,28 +644,19 @@ export default function ContadorPage() {
         </div>
         <p
           style={{
-            fontFamily: "Cormorant Garamond, serif",
-            fontSize: "clamp(1.2rem, 3vw, 1.6rem)",
-            fontWeight: 300,
             fontStyle: "italic",
-            lineHeight: 1.7,
             color: "#7a7060",
             letterSpacing: "0.02em",
+            fontFamily: "Cormorant Garamond, serif",
+            fontSize: "clamp(2.5rem, 7vw, 5rem)",
+            fontWeight: 300,
+            lineHeight: 1.1,
+            marginBottom: "0.5rem",
           }}
         >
-          <h1
-            style={{
-              fontFamily: "Cormorant Garamond, serif",
-              fontSize: "clamp(2.5rem, 7vw, 5rem)",
-              fontWeight: 300,
-              lineHeight: 1.1,
-              marginBottom: "0.5rem",
-            }}
-          >
-            <span className="text-gold-gradient">{NAME_1}</span>
-            <span style={{ color: "#3a3030", margin: "0 0.5rem" }}>×</span>
-            <span className="text-gold-gradient">{NAME_2}</span>
-          </h1>
+          <span className="text-gold-gradient">{NAME_1}</span>
+          <span style={{ color: "#3a3030", margin: "0 0.5rem" }}>×</span>
+          <span className="text-gold-gradient">{NAME_2}</span>
         </p>
       </div>
 
