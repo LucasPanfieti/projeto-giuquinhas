@@ -175,20 +175,23 @@ export default function ContadorPage() {
       }}
     >
       {/* Banner */}
-      <Image
-        src="/photos/banner-lg-13.webp"
-        alt="Lucas & Giulia - I see daylight"
-        width={1920}
-        height={600}
-        style={{
-          width: "100%",
-          height: "auto",
-          display: "block",
-          // marginBottom: "2rem",
-          marginTop: "70px",
-        }}
-        priority
-      />
+      <div
+        className="animate-fade-in-up"
+        style={{ width: "100%", marginTop: "70px" }}
+      >
+        <Image
+          src="/photos/banner-lg-13.webp"
+          alt="Lucas & Giulia - I see daylight"
+          width={1920}
+          height={600}
+          style={{
+            width: "100%",
+            height: "auto",
+            display: "block",
+          }}
+          priority
+        />
+      </div>
       {/* Header */}
       <div
         className="animate-fade-in-up"
@@ -572,48 +575,10 @@ export default function ContadorPage() {
         </div>
       </div>
 
-      {/* First kiss counter */}
-      {/* <div
-        className="animate-fade-in-up delay-300"
-        style={{
-          background: "rgba(16,16,16,0.8)",
-          border: "1px solid rgba(201,168,76,0.08)",
-          borderRadius: "6px",
-          padding: "1.5rem 2.5rem",
-          marginBottom: "3rem",
-          textAlign: "center",
-        }}
-      >
-        <p
-          style={{
-            fontFamily: "Jost, sans-serif",
-            fontSize: "0.58rem",
-            letterSpacing: "0.3em",
-            textTransform: "uppercase",
-            color: "#4a4040",
-            marginBottom: "0.75rem",
-          }}
-        >
-          Nosso primeiro beijo
-        </p>
-        <p
-          style={{
-            fontFamily: "Cormorant Garamond, serif",
-            fontSize: "clamp(0.95rem, 2vw, 1.15rem)",
-            fontWeight: 300,
-            color: "#8a7060",
-            fontStyle: "italic",
-          }}
-        >
-          08 de outubro de 2023 — há{" "}
-          {kissTime.totalDays.toLocaleString("pt-BR")} dias
-        </p>
-      </div> */}
-
       {/* Special phrase */}
       <div
         className="animate-fade-in-up delay-400"
-        style={{ textAlign: "center", maxWidth: "600px", marginBottom: "4rem" }}
+        style={{ textAlign: "center", maxWidth: "600px", marginBottom: "2rem" }}
       >
         <div
           style={{
@@ -651,7 +616,7 @@ export default function ContadorPage() {
             fontSize: "clamp(2.5rem, 7vw, 5rem)",
             fontWeight: 300,
             lineHeight: 1.1,
-            marginBottom: "0.5rem",
+            marginBottom: "0rem",
           }}
         >
           <span className="text-gold-gradient">{NAME_1}</span>
