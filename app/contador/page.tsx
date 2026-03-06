@@ -613,15 +613,13 @@ export default function ContadorPage() {
             color: "#7a7060",
             letterSpacing: "0.02em",
             fontFamily: "Cormorant Garamond, serif",
-            fontSize: "clamp(2.5rem, 7vw, 5rem)",
+            fontSize: "clamp(1.6rem, 4vw, 3rem)",
             fontWeight: 300,
             lineHeight: 1.1,
             marginBottom: "0rem",
           }}
         >
-          <span className="text-gold-gradient">{NAME_1}</span>
-          <span style={{ color: "#3a3030", margin: "0 0.5rem" }}>×</span>
-          <span className="text-gold-gradient">{NAME_2}</span>
+          <span className="text-gold-gradient">Linha do tempo</span>
         </p>
       </div>
 
