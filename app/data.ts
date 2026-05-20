@@ -14,6 +14,7 @@ export interface Moment {
 export interface YearData {
   year: number;
   subtitle: string;
+  published: boolean; // 🔒 false = mostra "em breve" para visitantes
   moments: Moment[];
 }
 
@@ -21,6 +22,7 @@ export const yearsData: Record<string, YearData> = {
   "2023": {
     year: 2023,
     subtitle: "Onde tudo começou",
+    published: true, // ✅ visível
     moments: [
       {
         date: "8 de outubro",
@@ -89,6 +91,7 @@ export const yearsData: Record<string, YearData> = {
 
   "2024": {
     year: 2024,
+    published: false, // 🔒 em breve
     subtitle: "Construindo memórias",
     moments: [
       {
@@ -142,6 +145,7 @@ export const yearsData: Record<string, YearData> = {
 
   "2025": {
     year: 2025,
+    published: false, // 🔒 em breve
     subtitle: "Amor que amadurece",
     moments: [
       {
@@ -188,6 +192,7 @@ export const yearsData: Record<string, YearData> = {
 
   "2026": {
     year: 2026,
+    published: false, // 🔒 em breve
     subtitle: "Escrevendo o futuro",
     moments: [
       {

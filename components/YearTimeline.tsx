@@ -42,6 +42,96 @@ export default function YearTimeline({ data }: Props) {
     });
   }, [data.moments]);
 
+  if (!data.published) {
+    return (
+      <div
+        style={{
+          minHeight: "100vh",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          justifyContent: "center",
+          padding: "2rem",
+          textAlign: "center",
+          gap: "1.5rem",
+        }}
+      >
+        <div
+          style={{
+            fontFamily: "Cormorant Garamond, serif",
+            fontSize: "clamp(5rem, 15vw, 8rem)",
+            fontWeight: 300,
+            lineHeight: 0.9,
+            background:
+              "linear-gradient(135deg, #2a2420 0%, #c9a84c 40%, #e8c97a 60%, #2a2420 100%)",
+            backgroundSize: "200% auto",
+            WebkitBackgroundClip: "text",
+            backgroundClip: "text",
+            WebkitTextFillColor: "transparent",
+            animation: "shimmer 5s linear infinite",
+          }}
+        >
+          {data.year}
+        </div>
+
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            gap: "1rem",
+          }}
+        >
+          <div
+            style={{
+              height: "1px",
+              width: "60px",
+              background:
+                "linear-gradient(to right, transparent, rgba(201,168,76,0.3))",
+            }}
+          />
+          <span style={{ color: "rgba(201,168,76,0.3)", fontSize: "0.6rem" }}>
+            ✦
+          </span>
+          <div
+            style={{
+              height: "1px",
+              width: "60px",
+              background:
+                "linear-gradient(to left, transparent, rgba(201,168,76,0.3))",
+            }}
+          />
+        </div>
+
+        <p
+          style={{
+            fontFamily: "Jost, sans-serif",
+            fontSize: "0.6rem",
+            letterSpacing: "0.5em",
+            textTransform: "uppercase",
+            color: "#4a4040",
+          }}
+        >
+          Em breve
+        </p>
+
+        <p
+          style={{
+            fontFamily: "Cormorant Garamond, serif",
+            fontSize: "clamp(1rem, 3vw, 1.3rem)",
+            fontWeight: 300,
+            fontStyle: "italic",
+            color: "#6a5a40",
+            maxWidth: "360px",
+            lineHeight: 1.7,
+          }}
+        >
+          Ainda estou preparando as memórias deste ano com todo o carinho que
+          você merece.
+        </p>
+      </div>
+    );
+  }
+
   return (
     <>
       {/* Lightbox overlay */}
