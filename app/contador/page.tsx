@@ -358,11 +358,8 @@ export default function ContadorPage() {
         </div>
 
         <div
+          className="flex flex-col items-center sm:flex-row sm:flex-wrap sm:justify-center"
           style={{
-            display: "flex",
-            flexWrap: "wrap",
-            alignItems: "center",
-            justifyContent: "center",
             gap: "0.25rem",
             textAlign: "center",
             marginTop: "2rem",
@@ -381,7 +378,6 @@ export default function ContadorPage() {
           >
             {time.totalDays.toLocaleString("pt-BR")} dias
           </span>
-          <span style={{ color: "#4a4040", margin: "0 0.75rem" }}>·</span>
           <span
             style={{
               fontFamily: "Cormorant Garamond, serif",
@@ -391,9 +387,14 @@ export default function ContadorPage() {
               fontStyle: "italic",
             }}
           >
+            <span
+              className="hidden sm:inline"
+              style={{ color: "#4a4040", margin: "0 0.75rem" }}
+            >
+              ·
+            </span>
             {Math.floor(time.totalDays / 7).toLocaleString("pt-BR")} semanas
           </span>
-          <span style={{ color: "#4a4040", margin: "0 0.75rem" }}>·</span>
           <span
             style={{
               fontFamily: "Cormorant Garamond, serif",
@@ -403,6 +404,12 @@ export default function ContadorPage() {
               fontStyle: "italic",
             }}
           >
+            <span
+              className="hidden sm:inline"
+              style={{ color: "#4a4040", margin: "0 0.75rem" }}
+            >
+              ·
+            </span>
             {(time.years * 12 + time.months).toLocaleString("pt-BR")} meses
           </span>
         </div>
@@ -524,11 +531,8 @@ export default function ContadorPage() {
         </div>
 
         <div
+          className="flex flex-col items-center sm:flex-row sm:flex-wrap sm:justify-center"
           style={{
-            display: "flex",
-            flexWrap: "wrap",
-            alignItems: "center",
-            justifyContent: "center",
             gap: "0.25rem",
             textAlign: "center",
             marginTop: "2rem",
@@ -547,7 +551,6 @@ export default function ContadorPage() {
           >
             {kissTime.totalDays.toLocaleString("pt-BR")} dias
           </span>
-          <span style={{ color: "#4a4040", margin: "0 0.75rem" }}>·</span>
           <span
             style={{
               fontFamily: "Cormorant Garamond, serif",
@@ -557,9 +560,14 @@ export default function ContadorPage() {
               fontStyle: "italic",
             }}
           >
+            <span
+              className="hidden sm:inline"
+              style={{ color: "#4a4040", margin: "0 0.75rem" }}
+            >
+              ·
+            </span>
             {Math.floor(kissTime.totalDays / 7).toLocaleString("pt-BR")} semanas
           </span>
-          <span style={{ color: "#4a4040", margin: "0 0.75rem" }}>·</span>
           <span
             style={{
               fontFamily: "Cormorant Garamond, serif",
@@ -569,6 +577,12 @@ export default function ContadorPage() {
               fontStyle: "italic",
             }}
           >
+            <span
+              className="hidden sm:inline"
+              style={{ color: "#4a4040", margin: "0 0.75rem" }}
+            >
+              ·
+            </span>
             {(kissTime.years * 12 + kissTime.months).toLocaleString("pt-BR")}{" "}
             meses
           </span>
