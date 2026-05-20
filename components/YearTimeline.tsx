@@ -63,6 +63,7 @@ export default function YearTimeline({ data }: Props) {
           {/* Close button */}
           <button
             onClick={() => setLightbox(null)}
+            className="lightbox-close"
             style={{
               position: "absolute",
               top: "1.5rem",
@@ -139,6 +140,7 @@ export default function YearTimeline({ data }: Props) {
       )}
 
       <div
+        className="timeline-wrapper"
         style={{
           minHeight: "100vh",
           paddingTop: "64px",
@@ -235,6 +237,7 @@ export default function YearTimeline({ data }: Props) {
               return (
                 <div
                   key={i}
+                  className="timeline-item"
                   style={{
                     display: "flex",
                     justifyContent: isLeft ? "flex-start" : "flex-end",
@@ -249,6 +252,7 @@ export default function YearTimeline({ data }: Props) {
                 >
                   {/* Dot on timeline */}
                   <div
+                    className="timeline-dot"
                     style={{
                       position: "absolute",
                       left: "50%",
@@ -270,7 +274,7 @@ export default function YearTimeline({ data }: Props) {
 
                   {/* Card */}
                   <div
-                    className="photo-card"
+                    className="photo-card timeline-card"
                     style={{
                       width: "calc(50% - 3rem)",
                       background: isHighlight
