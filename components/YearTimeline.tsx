@@ -316,14 +316,34 @@ export default function YearTimeline({ data }: Props) {
                           width: "100%",
                           height: "200px",
                           cursor: "zoom-in",
+                          overflow: "hidden",
                         }}
                       >
+                        {/* Blurred background fill */}
                         <Image
                           src={moment.photo}
-                          alt={moment.title}
+                          alt=""
+                          aria-hidden
                           fill
-                          style={{ objectFit: "contain" }}
+                          style={{
+                            objectFit: "cover",
+                            filter: "blur(18px) brightness(0.5) saturate(0.8)",
+                            transform: "scale(1.1)",
+                          }}
                         />
+                        {/* Sharp image on top */}
+                        <div
+                          style={{ position: "absolute", inset: 0, zIndex: 1 }}
+                        >
+                          <Image
+                            src={moment.photo}
+                            alt={moment.title}
+                            fill
+                            style={{
+                              objectFit: "contain",
+                            }}
+                          />
+                        </div>
                       </div>
                     ) : (
                       <div
