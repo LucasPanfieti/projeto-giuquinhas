@@ -1,11 +1,34 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import ServiceWorkerRegister from "@/components/ServiceWorkerRegister";
 
 export const metadata: Metadata = {
   title: "GiuQuinhas ♥",
   description: "Nossa história de amor",
+  applicationName: "GiuQuinhas",
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "black-translucent",
+    title: "GiuQuinhas ♥",
+  },
+  formatDetection: {
+    telephone: false,
+  },
+  openGraph: {
+    type: "website",
+    title: "GiuQuinhas ♥",
+    description: "Nossa história de amor",
+  },
+};
+
+export const viewport: Viewport = {
+  themeColor: "#c9a84c",
+  width: "device-width",
+  initialScale: 1,
+  minimumScale: 1,
+  viewportFit: "cover",
 };
 
 export default function RootLayout({
@@ -16,6 +39,7 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body>
+        <ServiceWorkerRegister />
         <Navigation />
         <main className="min-h-screen">{children}</main>
         <Footer />
