@@ -49,8 +49,8 @@ export default function Navigation() {
             <Image
               src="/photos/LG-logo.webp"
               alt="Nossa História"
-              width={60}
-              height={60}
+              width={50}
+              height={50}
               style={{ objectFit: "contain" }}
               priority
             />

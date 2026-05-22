@@ -28,6 +28,8 @@
 
 html {
   scroll-behavior: smooth;
+  background-color: #0a0a0a;
+  color-scheme: dark;
 }
 
 body {
