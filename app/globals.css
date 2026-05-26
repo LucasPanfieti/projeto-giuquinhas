@@ -39,6 +39,7 @@ body {
   font-weight: 300;
   letter-spacing: 0.02em;
   overflow-x: hidden;
+  padding-bottom: env(safe-area-inset-bottom);
 }
 
 /* Scrollbar */
