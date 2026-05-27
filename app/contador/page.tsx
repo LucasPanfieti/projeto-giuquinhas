@@ -180,7 +180,7 @@ export default function ContadorPage() {
         style={{ width: "100%", marginTop: "70px" }}
       >
         <Image
-          src="/photos/banner-lg-13.webp"
+          src="/photos/banner-lg-13-2.webp"
           alt="Lucas & Giulia - I see daylight"
           width={1920}
           height={600}
