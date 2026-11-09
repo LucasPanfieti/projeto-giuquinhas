@@ -9,6 +9,7 @@ export interface Moment {
   photo?: string; // Caminho da foto (opcional)
   emoji?: string; // Emoji representativo
   highlight?: boolean; // Se é um momento especial/destaque
+  link?: { href: string; label: string }; // Link opcional (ex: ler HQ)
 }
 
 export interface YearData {
@@ -28,7 +29,7 @@ export const yearsData: Record<string, YearData> = {
         date: "8 de outubro",
         title: "Nosso primeiro beijo",
         description:
-          "Infelizmente não temos uma foto desse momento, mas foi mágico e inesquecível.",
+          "O beijo que mudou tudo — mágico e inesquecível.",
         emoji: "💋",
         highlight: true,
         photo: "/photos/2023/primeiro-beijo.webp",
@@ -91,45 +92,100 @@ export const yearsData: Record<string, YearData> = {
 
   "2024": {
     year: 2024,
-    published: false, // 🔒 em breve
+    published: true, // ✅ visível
     subtitle: "Construindo memórias",
     moments: [
       {
-        date: "Janeiro",
+        date: "1 de janeiro",
         title: "Ano Novo, amor novo",
         description: "Virar o ano de mãos dadas foi a melhor forma de começar.",
         emoji: "🥂",
         highlight: true,
-        photo: "",
+        photo: "/photos/2024/ano-novo.webp",
       },
       {
-        date: "14 de fevereiro",
-        title: "Primeiro Dia dos Namorados",
-        description: "Celebrando o amor que cresceu mais do que imaginei.",
-        emoji: "❤️",
-        photo: "",
+        date: "Janeiro",
+        title: "Primeira praia",
+        description: "Nossa primeira praia juntos — sol, areia e o começo do ano.",
+        emoji: "🐚",
+        photo: "/photos/2024/primeira-praia.webp",
       },
       {
-        date: "8 de abril",
-        title: "4 meses juntos",
-        description: "Cada mês uma descoberta, cada dia uma razão pra sorrir.",
-        emoji: "🌸",
-        photo: "",
+        date: "Janeiro",
+        title: "InkinCare",
+        description: "Cuidando da gente — e da arte na pele.",
+        emoji: "🖋️",
+        photo: "/photos/2024/inkincare.webp",
+      },
+      {
+        date: "Fevereiro",
+        title: "Praia Carnaval",
+        description: "Carnaval na praia, sol e a gente juntos.",
+        emoji: "🏖️",
+        photo: "/photos/2024/outra-praia.webp",
+      },
+      {
+        date: "Março",
+        title: "Niver Momotzin",
+        description: "Celebrando o aniversário da Momotzin juntos.",
+        emoji: "🎂",
+        photo: "/photos/2024/niver-momotzin.webp",
+      },
+      {
+        date: "Maio",
+        title: "Dilatação",
+        description: "Dilatei a vista e não tava enxergando nada.",
+        emoji: "👀",
+        photo: "/photos/2024/dilatacao.webp",
+      },
+      {
+        date: "Junho",
+        title: "Pizza Crek",
+        description: "Pizza, conversa e aquela noite boa juntos.",
+        emoji: "🍕",
+        photo: "/photos/2024/crek.webp",
       },
       {
         date: "Julho",
-        title: "Aventuras de inverno",
-        description: "Frio lá fora, quentinho aqui dentro.",
-        emoji: "🧣",
-        photo: "",
+        title: "Center Norte",
+        description: "Mais um rolê nosso pelo Center Norte.",
+        emoji: "🛍️",
+        photo: "/photos/2024/cn.webp",
       },
       {
-        date: "8 de outubro",
-        title: "1 ano do primeiro beijo",
-        description: "Um ano desde aquele beijo que mudou tudo.",
-        emoji: "💫",
-        highlight: true,
-        photo: "",
+        date: "Setembro",
+        title: "Primeira vez em Boituva juntos",
+        description: "Também, ele é surdo. kkkk",
+        emoji: "🏞️",
+        photo: "/photos/2024/boituva.webp",
+      },
+      {
+        date: "15 de setembro",
+        title: "Primeira Bienal do Livro",
+        description: "Entre livros e corredores, mais uma memória nossa.",
+        emoji: "📚",
+        photo: "/photos/2024/bienal.webp",
+      },
+      {
+        date: "Outubro",
+        title: "Halloween",
+        description: "Mais um Halloween juntos — fantasias, clima e a gente.",
+        emoji: "🎃",
+        photo: "/photos/2024/halloween.webp",
+      },
+      {
+        date: "Novembro",
+        title: "Mr. Texas",
+        description: "Uma noite no Mr. Texas, só nossa.",
+        emoji: "🤠",
+        photo: "/photos/2024/mr-texas.webp",
+      },
+      {
+        date: "Novembro",
+        title: "Santana Parque",
+        description: "Um passeio no Santana Parque juntos.",
+        emoji: "🌳",
+        photo: "/photos/2024/santana-parque.webp",
       },
       {
         date: "8 de dezembro",
@@ -138,7 +194,14 @@ export const yearsData: Record<string, YearData> = {
           "Um ano inteiro de amor, cumplicidade e crescimento juntos. Que venham muitos mais.",
         emoji: "🥳",
         highlight: true,
-        photo: "",
+        photo: "/photos/2024/juarez.webp",
+      },
+      {
+        date: "Dezembro",
+        title: "Praia de rico",
+        description: "Água clara, sol forte e cara de quem tá numa praia de rico.",
+        emoji: "🌊",
+        photo: "/photos/2024/praia-cara.webp",
       },
     ],
   },
