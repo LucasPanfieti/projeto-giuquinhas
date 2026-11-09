@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { YearData } from "../app/data";
 
 interface Props {
@@ -498,6 +499,25 @@ export default function YearTimeline({ data }: Props) {
                       >
                         {moment.description}
                       </p>
+                      {moment.link && (
+                        <Link
+                          href={moment.link.href}
+                          style={{
+                            display: "inline-block",
+                            marginTop: "1rem",
+                            fontFamily: "Jost, sans-serif",
+                            fontSize: "0.58rem",
+                            letterSpacing: "0.28em",
+                            textTransform: "uppercase",
+                            color: "#c9a84c",
+                            textDecoration: "none",
+                            borderBottom: "1px solid rgba(201,168,76,0.35)",
+                            paddingBottom: "0.2rem",
+                          }}
+                        >
+                          {moment.link.label} →
+                        </Link>
+                      )}
                     </div>
                   </div>
                 </div>

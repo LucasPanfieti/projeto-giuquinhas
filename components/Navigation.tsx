@@ -7,6 +7,7 @@ import Image from "next/image";
 
 const navItems = [
   { href: "/contador", label: "Contador" },
+  { href: "/hqs", label: "HQs" },
   { href: "/2023", label: "2023" },
   { href: "/2024", label: "2024" },
   { href: "/2025", label: "2025" },
@@ -105,7 +106,7 @@ export default function Navigation() {
               key={item.href}
               href={item.href}
               onClick={() => setMenuOpen(false)}
-              className={`nav-link ${pathname === item.href ? "active" : ""}`}
+              className={`nav-link ${pathname === item.href || pathname.startsWith(item.href) ? "active" : ""}`}
               style={{ textDecoration: "none", fontSize: "0.85rem" }}
             >
               {item.label}
