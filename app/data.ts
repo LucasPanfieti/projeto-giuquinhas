@@ -7,6 +7,7 @@ export interface Moment {
   title: string; // Título do momento
   description: string; // Descrição romântica
   photo?: string; // Caminho da foto (opcional)
+  audio?: string; // Preview de áudio ao abrir a foto (opcional)
   emoji?: string; // Emoji representativo
   highlight?: boolean; // Se é um momento especial/destaque
   link?: { href: string; label: string }; // Link opcional (ex: ler HQ)
@@ -33,6 +34,7 @@ export const yearsData: Record<string, YearData> = {
         emoji: "💋",
         highlight: true,
         photo: "/photos/2023/primeiro-beijo.webp",
+        audio: "/audio/preview-what-lovers-do.mp3",
       },
       {
         date: "12 de outubro",
@@ -96,8 +98,8 @@ export const yearsData: Record<string, YearData> = {
     moments: [
       {
         date: "1 de janeiro",
-        title: "Ano Novo, amor novo",
-        description: "Fogos na virada e um beijo bem no meio deles.",
+        title: "Primeiro Ano Novo juntos",
+        description: "Virada com fogos... e um beijo bem no meio deles.",
         highlight: true,
         photo: "/photos/2024/ano-novo.webp",
       },

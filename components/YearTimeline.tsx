@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { YearData } from "../app/data";
@@ -12,11 +12,13 @@ interface Props {
 interface LightboxState {
   photo: string;
   title: string;
+  audio?: string;
 }
 
 export default function YearTimeline({ data }: Props) {
   const [visible, setVisible] = useState<Set<number>>(new Set());
   const [lightbox, setLightbox] = useState<LightboxState | null>(null);
+  const audioRef = useRef<HTMLAudioElement | null>(null);
 
   useEffect(() => {
     if (!lightbox) return;
@@ -28,6 +30,30 @@ export default function YearTimeline({ data }: Props) {
     return () => {
       window.removeEventListener("keydown", handleKey);
       document.body.style.overflow = "";
+    };
+  }, [lightbox]);
+
+  useEffect(() => {
+    const current = audioRef.current;
+    if (current) {
+      current.pause();
+      current.currentTime = 0;
+      audioRef.current = null;
+    }
+
+    if (!lightbox?.audio) return;
+
+    const audio = new Audio(lightbox.audio);
+    audio.preload = "auto";
+    audioRef.current = audio;
+    void audio.play().catch(() => {
+      // Autoplay can fail if the browser blocks it; click already counts as gesture.
+    });
+
+    return () => {
+      audio.pause();
+      audio.currentTime = 0;
+      if (audioRef.current === audio) audioRef.current = null;
     };
   }, [lightbox]);
 
@@ -400,6 +426,7 @@ export default function YearTimeline({ data }: Props) {
                           setLightbox({
                             photo: moment.photo!,
                             title: moment.title,
+                            audio: moment.audio,
                           })
                         }
                         style={{
