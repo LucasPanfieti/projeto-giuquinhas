@@ -508,12 +508,39 @@ export default function YearTimeline({ data }: Props) {
                           fontSize: "clamp(1.1rem, 2vw, 1.4rem)",
                           fontWeight: 300,
                           color: "#f0ebe0",
-                          marginBottom: "0.75rem",
+                          marginBottom: moment.location ? "0.5rem" : "0.75rem",
                           lineHeight: 1.3,
                         }}
                       >
                         {moment.title}
                       </h3>
+                      {moment.location && (
+                        <div
+                          style={{
+                            display: "inline-flex",
+                            alignItems: "center",
+                            gap: "0.4rem",
+                            fontFamily: "Jost, sans-serif",
+                            fontSize: "0.72rem",
+                            fontWeight: 400,
+                            letterSpacing: "0.04em",
+                            color: "#c9a84c",
+                            marginBottom: "0.85rem",
+                          }}
+                        >
+                          <svg
+                            width="14"
+                            height="14"
+                            viewBox="0 0 24 24"
+                            fill="#c9a84c"
+                            aria-hidden="true"
+                            style={{ flexShrink: 0 }}
+                          >
+                            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 110-5 2.5 2.5 0 010 5z" />
+                          </svg>
+                          <span>{moment.location}</span>
+                        </div>
+                      )}
                       <p
                         style={{
                           fontFamily: "Jost, sans-serif",

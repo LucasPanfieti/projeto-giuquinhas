@@ -10,6 +10,7 @@ export interface Moment {
   audio?: string; // Preview de áudio ao abrir a foto (opcional)
   emoji?: string; // Emoji representativo
   highlight?: boolean; // Se é um momento especial/destaque
+  location?: string; // Local (ex: Bar do Juarez)
   link?: { href: string; label: string }; // Link opcional (ex: ler HQ)
 }
 
@@ -33,6 +34,7 @@ export const yearsData: Record<string, YearData> = {
           "Infelizmente não temos fotos desse dia, mas foi um momento inesquecível e mágico. O tempo parou.",
         emoji: "💋",
         highlight: true,
+        location: "Festa de Halloween",
         photo: "/photos/2023/primeiro-beijo.webp",
         audio: "/audio/preview-what-lovers-do.mp3",
       },
@@ -42,6 +44,7 @@ export const yearsData: Record<string, YearData> = {
         description:
           "Fomos até o Center Norte ver um filme e pegamos a maior chuva com o Uninho.",
         emoji: "☔",
+        location: "Center Norte",
         photo: "/photos/2023/primeiro-encontro.webp",
       },
       {
@@ -50,13 +53,15 @@ export const yearsData: Record<string, YearData> = {
         description:
           "Conversas até tarde, risadas e a certeza de que queria você por perto.",
         emoji: "📸",
+        location: "Casa da Bia (Eslepe)",
         photo: "/photos/2023/primeira-foto-juntos.webp",
       },
       {
         date: "28 de outubro",
-        title: "Primeiro Halloween",
+        title: "Prontos para o Halloween",
         description: "Que vampira gata!",
         emoji: "🎃",
+        location: "Casa de Momotzão",
         photo: "/photos/2023/primeiro-halloween.webp",
       },
       {
@@ -64,6 +69,7 @@ export const yearsData: Record<string, YearData> = {
         title: "Primeiro jogo do São Paulo",
         description: "Cartão vermelho pra você por roubar meu coração.",
         emoji: "⚽",
+        location: "Morumbi",
         photo: "/photos/2023/primeiro-jogo-sp.webp",
       },
       {
@@ -71,13 +77,15 @@ export const yearsData: Record<string, YearData> = {
         title: "Primeiro sítio",
         description: "Primeira vez no sítio juntos. Simples assim, e foi ótimo.",
         emoji: "🏡",
+        location: "Sítio - Mairiporã / Caieiras",
         photo: "/photos/2023/primeiro-sitio.webp",
       },
       {
         date: "11 de novembro",
         title: "Primeiro parque",
-        description: "Primeiro role no Vila Lobos",
+        description: "Rolê no parque. Muito calor e provamos smoothie de açaí.",
         emoji: "🌳",
+        location: "Parque Villa Lobos",
         photo: "/photos/2023/primeiro-parque.webp",
       },
       {
@@ -86,6 +94,7 @@ export const yearsData: Record<string, YearData> = {
         description: "O dia em que disse sim e eu gaguejei pra carai.",
         emoji: "💍",
         highlight: true,
+        location: "Bar do Juarez",
         photo: "/photos/2023/finalmente-namorados.webp",
       },
     ],
@@ -101,43 +110,57 @@ export const yearsData: Record<string, YearData> = {
         title: "Primeiro Ano Novo juntos",
         description: "Virada com fogos... e um beijo bem no meio deles.",
         highlight: true,
+        location: "Sítio - Mairiporã / Caieiras",
         photo: "/photos/2024/ano-novo.webp",
+      },
+      {
+        date: "Janeiro",
+        title: "Primeiro sitiozada",
+        description: "Primeiro sitiozada com os doidos.",
+        location: "Sítio - Mairiporã / Caieiras",
+        photo: "/photos/2024/sitio-doidos.webp",
       },
       {
         date: "Janeiro",
         title: "Primeira praia",
         description:
           "Tentei abrir uma concha com abridor de lata. Rasguei o dedo. Tenho a cicatriz até hoje.",
+        location: "Itanhaém",
         photo: "/photos/2024/primeira-praia.webp",
       },
       {
         date: "Janeiro",
         title: "InkinCare",
         description: "InkinCare. O nome já é engraçado. Limpeza de pele feita.",
+        location: "Casa dos avós de Momotzin",
         photo: "/photos/2024/inkincare.webp",
       },
       {
         date: "Fevereiro",
         title: "Carnaval na praia",
         description: "Carnaval na praia. Teve briga de família, mas a gente tava de boa.",
+        location: "Praia Grande",
         photo: "/photos/2024/outra-praia.webp",
       },
       {
         date: "Fevereiro",
         title: "Segundo jogo do São Paulo",
         description: "Segundo jogo do São Paulo juntos.",
+        location: "Morumbi",
         photo: "/photos/2024/jogo-sp.webp",
       },
       {
         date: "Março",
         title: "Niver Momotzin",
         description: 'Ela fez 22. "I don\'t know about you, but I\'m feeling 22."',
+        location: "Casa dos avós de Momotzin",
         photo: "/photos/2024/niver-momotzin.webp",
       },
       {
         date: "Maio",
         title: "Aniversário aleatório",
         description: "Fomos no aniversário. Eu dilatei a vista e não tava enxergando nada.",
+        location: "Apartamento aleatório",
         photo: "/photos/2024/dilatacao.webp",
       },
       {
@@ -145,18 +168,21 @@ export const yearsData: Record<string, YearData> = {
         title: "Pizza Crek",
         description:
           "Primeira vez no Crek. Momotzin comeu morango com Nutella feito criança e melou a boca toda.",
+        location: "Pizza Crek Santana",
         photo: "/photos/2024/crek.webp",
       },
       {
         date: "Julho",
         title: "Center Norte",
         description: "Clássico rolê no Center Norte e comer no Spoleto.",
+        location: "Center Norte",
         photo: "/photos/2024/cn.webp",
       },
       {
         date: "Setembro",
         title: "Primeira vez em Boituva juntos",
         description: '"Também, ele é surdo."',
+        location: "Boituva",
         photo: "/photos/2024/boituva.webp",
       },
       {
@@ -164,6 +190,7 @@ export const yearsData: Record<string, YearData> = {
         title: "Primeira Bienal do Livro",
         description:
           "Nossa primeira Bienal. Andamos pra caramba, chuva em Santana na volta e pizza no final do dia.",
+        location: "Distrito Anhembi",
         photo: "/photos/2024/bienal.webp",
       },
       {
@@ -171,12 +198,15 @@ export const yearsData: Record<string, YearData> = {
         title: "Halloween",
         description:
           "Halloween bom… se ignorar as atitudes de certas pessoas.",
+        location: "Casa dos avós de Momotzin",
         photo: "/photos/2024/halloween.webp",
       },
       {
         date: "Novembro",
         title: "Mr. Texas",
-        description: "Primeira vez no Mr. Texas. Climinha bom demais.",
+        description:
+          "Primeira vez no Mr. Texas. Provamos pizza americana e adoramos. Pizza com hambúrguer, quem diria.",
+        location: "Mr. Texas Santana",
         photo: "/photos/2024/mr-texas.webp",
       },
       {
@@ -184,6 +214,7 @@ export const yearsData: Record<string, YearData> = {
         title: "Santana Parque",
         description:
           "Nosso rolê cotidiano — a gente quase morava lá. Falecido Santana Parque, agora Partage Santana.",
+        location: "Santana Park (Partage Santana)",
         photo: "/photos/2024/santana-parque.webp",
       },
       {
@@ -191,6 +222,7 @@ export const yearsData: Record<string, YearData> = {
         title: "Praia de rico",
         description:
           "Casa da madrinha, alto padrão. Multa por estacionar errado e trânsito monstro.",
+        location: "Bertioga",
         photo: "/photos/2024/praia-cara.webp",
       },
       {
@@ -199,6 +231,7 @@ export const yearsData: Record<string, YearData> = {
         description:
           "E mesmo depois de um ano inteirinho, eu te amo mais e mais. Pra sempre meu momot.",
         highlight: true,
+        location: "Bar do Juarez",
         photo: "/photos/2024/juarez.webp",
       },
     ],
@@ -246,6 +279,7 @@ export const yearsData: Record<string, YearData> = {
           "Dois anos juntos. Dois anos de sorrisos, abraços e amor de verdade.",
         emoji: "🎊",
         highlight: true,
+        location: "Bar do Juarez",
         photo: "",
       },
     ],
